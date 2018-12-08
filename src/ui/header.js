@@ -1,5 +1,6 @@
 import React from 'react'
 import './header.css'
+import photoSrc from '../static/account.png'
 
 const Header = () => {
     return (
@@ -15,7 +16,7 @@ const Header = () => {
             <button>Search</button>
             <button>Keranjang</button>
             <button>Bantuan</button>
-
+            <a style={{float:'right'}}><img src={photoSrc}></img></a>
         </div>
     )
 }
