@@ -1,0 +1,27 @@
+.header{
+	width:100%;
+	background-color: #f8d300;
+	position:fixed; /*trik posisi fix*/
+	z-index:9999; /*supaya header selalu muncul di atas seluruh elemen*/
+}
+
+.header a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+footer {
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+	color: #aaa;
+	text-decoration: none;
+}
