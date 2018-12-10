@@ -1,0 +1,13 @@
+.navbar {
+    background-color: red;
+}
+.input-search{
+    background-color: white;
+}
+
+.search{
+    display: flex;
+    margin:0 auto;
+    width: 25%;
+    height: 30px;
+}
