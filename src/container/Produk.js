@@ -13,16 +13,6 @@ class Produk extends React.Component {
                     <CardProduk/>
                     <CardProduk/>
                 </div>
-                <div>
-                    <CardProduk/>
-                    <CardProduk/>
-                    <CardProduk/>
-                </div>
-                <div>
-                    <CardProduk/>
-                    <CardProduk/>
-                    <CardProduk/>
-                </div>
             </div>
         );   
     }

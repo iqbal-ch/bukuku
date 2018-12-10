@@ -1,7 +1,7 @@
 .header{
 	width:100%;
 	background-color: #f8d300;
-	position:fixed; /*trik posisi fix*/
+	position:absolute; /*trik posisi fix*/
 	z-index:9999; /*supaya header selalu muncul di atas seluruh elemen*/
 }
 
