@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Header from './ui/header'
-import Footer from './ui/footer';
+import Footer from './ui/Footer';
 import Produk from './container/Produk'
+import NavBar from './ui/NavBar';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <NavBar />
         <Produk />
         <Footer />
       </div>

@@ -1,8 +1,9 @@
 import React from 'react'
-import './header.css'
+import './style.css'
+
 import photoSrc from '../static/account.png'
 
-const Header = () => {
+const NavBar = () => {
     return (
         <div className="header">
 	        <a href="#">Ayuna Store</a>
@@ -13,12 +14,12 @@ const Header = () => {
                 <option value="audi">Audi</option>
             </select>
             <input></input>
-            <button>Search</button>
-            <button>Keranjang</button>
-            <button>Bantuan</button>
+                <button>Search</button>
+                <button>Keranjang</button>
+                <button>Bantuan</button>
             <a style={{float:'right'}}><img src={photoSrc}></img></a>
         </div>
     )
 }
 
-export default Header;
+export default NavBar;

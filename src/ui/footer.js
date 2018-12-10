@@ -1,10 +1,9 @@
 import React from 'react';
-import './header.css'
 
 
 const Footer = () => (
   <footer>
-    Created by MEMEK
+    Created by 
   </footer>
 );
 
