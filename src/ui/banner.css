@@ -8,3 +8,20 @@
   background-size: cover;
   position: relative;
 }
+
+.banner-image {
+    width: 1756.04px;
+    height: 377.63px;
+    background-color: orange; 
+}
+
+.produk-banner{
+  width: 1756.04px;
+  height: 404.15px;
+  background-color: orange; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 20px;
+}
