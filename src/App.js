@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Banner from './ui/Banner'
-import ProdukCard from './component/ProdukCard'
 import Footer from './ui/Footer';
 import NavBar from './ui/NavBar';
+import ProdukDetail from './container/ProdukDetail'
 
 class App extends Component {
   render() {
@@ -11,18 +10,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <div className="content">
-          <Banner/>
-          <Banner/>
-          <Banner/>
-          <div className="produk">
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-          </div>
-          <button className="btn-loadmore">Load More</button>
+          <ProdukDetail />
         </div>
         <Footer />
       </div>

@@ -1,0 +1,34 @@
+.summary-produk{
+    border-style: solid;
+    border-color:gray;
+    box-sizing: border-box;
+    padding: 50px;
+    overflow: auto;
+    margin-bottom: 5px;
+}
+
+.img-galery{
+    width: 30%;
+    height: 350px;
+    background-color: gray;
+    margin: 10px;
+    float: left;
+}
+
+.form-produk{
+
+}
+
+/* Style the tab */
+.tab {
+  width: 100%;
+  }
+
+  .detail{
+    height: 560px;
+    margin-bottom: 30px;
+    border: 2px;
+    border-color: grey;
+    border-style: solid;
+  }
+  
