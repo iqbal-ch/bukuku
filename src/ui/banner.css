@@ -1,27 +1,6 @@
 .banner {
-  /* Set a specific height */
-  height: 50%;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.banner-image {
-    width: 1756.04px;
-    height: 377.63px;
-    background-color: orange; 
-}
-
-.produk-banner{
-  width: 1756.04px;
-  height: 404.15px;
-  background-color: orange; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  margin: 20px;
+  width: 100%;
+  height: 300px;
+  background-color: orange;
+  margin-bottom: 8px;
 }

@@ -1,9 +1,16 @@
 .navbar {
     background-color: rgb(255, 166, 0);
-    height: 64px;
+    width: 100%;
+    height: 53px;
+}
+.navbar-bottom {
+    background-color: rgb(255, 189, 67);
+    width: 100%;
+    height: 30px;
 }
 .input-search{
     width: 70%;
+    height: 28px;
 }
 
 .search{
@@ -16,8 +23,9 @@
     float: right;
 }
 
-.navbar-bottom {
-    background-color: rgb(255, 189, 67);
-    width: 100%;
-    height: 34px;
+h4{
+    margin-top: 14px;
+    margin-bottom: 10px;
+    margin-left: 26px; 
 }
+

@@ -1,0 +1,7 @@
+.produk-card{
+    background-color: coral;
+    box-sizing: border-box;
+    width: 20%;
+    height: 200px;
+    margin: 5px;
+}
