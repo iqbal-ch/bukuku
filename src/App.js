@@ -21,8 +21,14 @@ class App extends Component {
             <ProdukCard/>
             <ProdukCard/>
             <ProdukCard/>
+            <ProdukCard/>
+            <ProdukCard/>
+            <ProdukCard/>
+            <ProdukCard/>
           </div>
-          <button className="btn-loadmore">Load More</button>
+          <div className="coba">
+            <button className="btn-loadmore">Load More</button>
+          </div>
         </div>
         <Footer />
       </div>
