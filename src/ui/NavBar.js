@@ -7,8 +7,8 @@ import './Navbar.css';
 
 const NavBar = () => {
     return(
-        <div>
-            <AppBar position='absolute'>
+        <div position='absolute'>
+            <AppBar >
                 <div className="navbar">
                     <h4>Bukuku</h4>
                 </div>
