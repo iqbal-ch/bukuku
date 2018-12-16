@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-
-import Banner from './ui/Banner'
-import ProdukCard from './component/ProdukCard'
-import Footer from './ui/Footer';
 import Footer from './ui/Footer';
 import Produk from './container/Produk'
 import NavBar from './ui/NavBar';
@@ -13,26 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <div className="content">
-          <Banner/>
-          <Banner/>
-          <Banner/>
-          <div className="produk">
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-          </div>
-          <div className="coba">
-            <button className="btn-loadmore">Load More</button>
-          </div>
-        </div>
+        <Produk />
         <Footer />
       </div>
     );
