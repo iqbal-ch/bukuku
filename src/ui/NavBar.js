@@ -1,25 +1,23 @@
 import React from 'react'
-import './style.css'
+import AppBar from '@material-ui/core/AppBar';
 
-import photoSrc from '../static/account.png'
+
+import './Navbar.css';
 
 const NavBar = () => {
-    return (
-        <div className="header">
-	        <a href="#">Ayuna Store</a>
-            <select name="cars">
-                <option value="Semua">Semua</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
-            </select>
-            <input></input>
-                <button>Search</button>
-                <button>Keranjang</button>
-                <button>Bantuan</button>
-            <a style={{float:'right'}}><img src={photoSrc}></img></a>
+    return(
+        <div>
+            <AppBar position='absolute'>
+                <div className="navbar">
+                    <h4>Bukuku</h4>
+                </div>
+                <div className="navbar-bottom">
+
+                </div>
+            </AppBar>
         </div>
     )
+
 }
 
 export default NavBar;
