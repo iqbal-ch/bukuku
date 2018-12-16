@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import Banner from './ui/Banner'
 import ProdukCard from './component/ProdukCard'
 import Footer from './ui/Footer';
+import Footer from './ui/Footer';
+import Produk from './container/Produk'
 import NavBar from './ui/NavBar';
 
 class App extends Component {
