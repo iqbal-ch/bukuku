@@ -6,7 +6,6 @@
 .navbar-bottom {
     background-color: rgb(255, 189, 67);
     width: 100%;
-    height: 30px;
 }
 .input-search{
     width: 70%;
@@ -29,3 +28,20 @@ h4{
     margin-left: 26px; 
 }
 
+.route-link  {
+    display: inline;
+    font-size: 16px;
+  }
+
+ul,li {
+    display: inline;
+    padding: 15px;
+}
+
+a {
+    display: inline-block;
+    padding: 5px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
