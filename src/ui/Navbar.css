@@ -23,6 +23,7 @@
 }
 
 h4{
+    display: inline-block;
     margin-top: 14px;
     margin-bottom: 10px;
     margin-left: 26px; 
@@ -44,4 +45,20 @@ a {
     text-decoration: none;
     color: #efefef;
   }
-  
+
+.search-input{
+    display: inline-block;
+    margin: auto;
+}
+
+.search-input > input{
+    margin-left: 443px;
+}
+
+img{
+    display: inline-block;
+    float: right;
+    border-radius: 50%;
+    width: 35px;
+    margin:10px;
+}
