@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-import Banner from './ui/Banner'
-import ProdukCard from './component/ProdukCard'
+import {Route, Switch} from 'react-router-dom';
+
 import Footer from './ui/Footer';
 import NavBar from './ui/NavBar';
+import Landing from './page/LandingPage'
+
+import './App.css';
 
 class App extends Component {
   render() {
@@ -11,24 +13,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <div className="content">
-          <Banner/>
-          <Banner/>
-          <Banner/>
-          <div className="produk">
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-            <ProdukCard/>
-          </div>
-          <div className="coba">
-            <button className="btn-loadmore">Load More</button>
-          </div>
+          <Route exact path='/' component={Landing} />
         </div>
         <Footer />
       </div>
