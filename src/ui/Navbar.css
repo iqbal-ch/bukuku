@@ -55,6 +55,16 @@ a {
     margin-left: 443px;
 }
 
+.button-left{
+    float: right;
+    margin:17px;
+    text-decoration: none;
+    background-color: rgb(255, 219, 121);
+    border: none;
+    color: white;
+    border-radius: 12px;
+}
+
 img{
     display: inline-block;
     float: right;
@@ -62,3 +72,4 @@ img{
     width: 35px;
     margin:10px;
 }
+
