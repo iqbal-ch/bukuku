@@ -3,7 +3,44 @@
     background-color: coral;
     box-sizing: border-box;
     width: 280px;
-    height: 350px;
+    height: 506px;
     margin: 5px;
+    text-align: center;
     float: left;
+}
+
+.img-produk{
+    display: block;
+    height: 360px;
+    width: 90%;
+    margin:auto;
+    margin-top: 12px;
+    background-color: blanchedalmond;
+
+}
+
+.book-title{
+    margin-bottom: 0px;
+    color: white;
+}
+.book-author{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: white;
+}
+.book-price{
+    margin-top: 5px;
+    margin-bottom: 10px; 
+    color: rgb(251, 48, 89);
+}   
+
+.btn-order{
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    text-decoration: none;
+    background-color: rgb(255, 219, 121);
+    border: none;
+    color: white;
+    border-radius: 12px;
 }

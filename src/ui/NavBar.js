@@ -10,12 +10,12 @@ const NavBar = () => {
         <div position='absolute'>
             <AppBar >
                 <div className="navbar">
-                    <h4>Bukuku</h4>
+                    <h4 className="logo">Bukuku</h4>
                     <div className="search-input">
                      <input></input>
                      <button>search</button>
                 </div>
-                <img src="https://lh3.googleusercontent.com/-r-J7b6Nd1W8/AAAAAAAAAAI/AAAAAAAAAAA/AKxrwcbACnEtjGHxbVvaUl3gB4vRqE9Vhw/s64-c-mo/photo.jpg"></img>
+                <img className="img-profil" src="https://lh3.googleusercontent.com/-r-J7b6Nd1W8/AAAAAAAAAAI/AAAAAAAAAAA/AKxrwcbACnEtjGHxbVvaUl3gB4vRqE9Vhw/s64-c-mo/photo.jpg"></img>
                 <button className="button-left">Bantuan</button>
                 <button className="button-left">Keranjang</button>
                 </div>

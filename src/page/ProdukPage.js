@@ -18,6 +18,8 @@ const ProdukPage = () => {
                 <ProdukCard/>
                 <ProdukCard/>
                 <ProdukCard/>
+                <ProdukCard/>
+                <ProdukCard/>
             </div>
             <button className="btn-loadmore">Load More</button>
         </div>

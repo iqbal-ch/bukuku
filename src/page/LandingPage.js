@@ -18,8 +18,6 @@ const Landing = () => {
                 <ProdukCard/>
                 <ProdukCard/>
                 <ProdukCard/>
-                <ProdukCard/>
-                <ProdukCard/>
             </div>
             <div className="coba">
                 <button className="btn-loadmore">Load More</button>
