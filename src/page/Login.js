@@ -1,32 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import auth from "../service/auth";
 
-import {Redirect} from 'react-router-dom';
+import './Login.css'
 
-  
-class Login extends Component {
-state = { redirectToReferrer: false };
-
-login = () => {
-    this.props.authenticate(() => {
-    this.setState({ redirectToReferrer: true });
-    });
+const Login = props => {
+  console.log(props)
+  return (
+    <div>
+      <h1>Login Page</h1>
+      <label>username or email :</label>
+      <input></input>
+      <label>password :</label>
+      <input type='password'></input>
+      <button onClick={() => { auth.login(() => {props.history.push("/")} ) }} >
+        Login
+      </button>
+    </div>
+  );
 };
-  
-    render() {
-    let { from } = this.props.location.state || { from: { pathname: "/" } };
-    let { redirectToReferrer } = this.state;
-    
-    console.log(this.props)
-    if (redirectToReferrer) return <Redirect to={from} />;
-  
-      return (
-        <div>
-          {/* <p>You must log in to view the page at {from.pathname}</p> */}
-          <button onClick={this.login}>Log in</button>
-        </div>
-      );
-    }
-  }
-  
 export default Login;
 

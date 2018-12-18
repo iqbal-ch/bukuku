@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import AppBar from '@material-ui/core/AppBar';
+
+import auth from '../service/auth'
 
 import './Navbar.css';
 
-const NavBar = () => {
+const NavBar = props => {
+    console.log(props)
     return(
         <div position='absolute'>
             <AppBar >
@@ -15,9 +17,10 @@ const NavBar = () => {
                      <input></input>
                      <button>search</button>
                 </div>
-                <img className="img-profil" src="https://lh3.googleusercontent.com/-r-J7b6Nd1W8/AAAAAAAAAAI/AAAAAAAAAAA/AKxrwcbACnEtjGHxbVvaUl3gB4vRqE9Vhw/s64-c-mo/photo.jpg"></img>
+                <img className="img-profil" alt="photo profil" src="https://lh3.googleusercontent.com/-r-J7b6Nd1W8/AAAAAAAAAAI/AAAAAAAAAAA/AKxrwcbACnEtjGHxbVvaUl3gB4vRqE9Vhw/s64-c-mo/photo.jpg"></img>
                 <button className="button-left">Bantuan</button>
                 <button className="button-left">Keranjang</button>
+                <button className="button-left" onClick={() => { auth.logout() }}>logout</button>
                 </div>
                 <div className="navbar-bottom">
                     <div className="route-link">
