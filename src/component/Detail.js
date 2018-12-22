@@ -4,11 +4,11 @@ import './DetailProduk.css'
 
 const Detail = () => {
     return(
-        <div class="tab">
+        <div className="tab">
             <button>Detail</button>
             <button>Spesifikasi</button>
             <button>Ulasan</button>
-            <div class="detail">
+            <div className="detail">
                 
             </div>
 

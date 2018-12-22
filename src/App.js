@@ -8,6 +8,7 @@ import Login from './page/Login'
 import Landing from './page/LandingPage'
 import ProdukDetailPage from './page/ProdukDetailPage'
 import ProdukPage from './page/ProdukPage'
+import SignupPage from './page/Signup'
 import notFound from './page/404'
 
 import ProtectedRoute from './service/protected.route';
@@ -23,6 +24,7 @@ class App extends Component {
         <Switch>
             <Route exact path='/' component={Landing} />
             <Route path='/login' component={Login} />
+            <Route path='/signup' component={SignupPage} />
             <ProtectedRoute exact path='/produk' component={ProdukPage} />
             <ProtectedRoute path='/produk/detail' component={ProdukDetailPage} />
             <Route path='*' component={notFound} />

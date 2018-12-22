@@ -1,22 +1,83 @@
-import React from 'react';
-import auth from "../service/auth";
+import React, { Component } from 'react';
+import { Redirect } from 'react-router';
+import { connect } from 'react-redux';
+
+import {actionTryLogin}  from '../actions';
 
 import './Login.css'
 
-const Login = props => {
-  console.log(props)
-  return (
-    <div>
-      <h1>Login Page</h1>
-      <label>username or email :</label>
-      <input></input>
-      <label>password :</label>
-      <input type='password'></input>
-      <button onClick={() => { auth.login(() => {props.history.push("/")} ) }} >
-        Login
-      </button>
-    </div>
-  );
+class Login extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      email: '',
+      password:''
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount(){
+    if(this.props.isAuth) {
+      this.props.history.push('/');
+    }
+  }
+
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  handleSubmit(e) {
+      e.preventDefault();
+      this.props.tryLogin(this.state)
+      // try {
+      //   this.props.tryLogin(this.state)
+      //   .then(() => {
+      //       this.props.history.push('/');       
+      //   });
+      // }
+      // catch(ex){
+      //   //this.state.errorMsg = "Unable to connect to server";
+      //   console.log("error", ex);
+      // }
+  }
+
+
+  render() {
+    if(this.props.isAuth)
+      return <Redirect to="/" />
+      
+    return (
+      <div>
+        <h1>Login Page</h1>
+        <form>
+          <label>username or email :</label>
+          <input type="email" name="email" onChange={this.handleChange}></input>
+          <label>password :</label>
+          <input type='password' name="password" onChange={this.handleChange}></input>
+          <button className="button" onClick={this.handleSubmit}>
+            Login
+          </button>
+        </form>
+      </div>
+    );
+  }
 };
-export default Login;
+
+const mapStateToProps = (state) => {
+  return { isAuth: state.user.isAuth }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    tryLogin: (values) => { dispatch(actionTryLogin(values));}
+  };
+};
+
+//export default Login;
+export default connect(mapStateToProps,mapDispatchToProps)(Login);
 
