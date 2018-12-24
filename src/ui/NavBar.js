@@ -11,9 +11,13 @@ class NavBar extends Component {
     constructor(props) {
         super(props);
     }
+
+    
+    
     
     render (){
-        if(localStorage.getItem('user')){
+        console.log(this.props.isAuth);
+        if(this.props.isAuth){
             return(
                 <div position='absolute'>
                     <AppBar >
@@ -40,7 +44,7 @@ class NavBar extends Component {
                     </AppBar>
                 </div>
             )
-        }
+        }else{
             return(
                 <div position='absolute'>
                     <AppBar >
@@ -64,6 +68,7 @@ class NavBar extends Component {
                     </AppBar>
                 </div>
             )
+        } 
     }
    
 

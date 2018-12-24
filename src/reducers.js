@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import {
   SET_FETCHING,
   SET_USER,
-  DELETE_USER
+  DELETE_USER,
+  FETCH_PRODUCTS
 } from './actions';
 
 const initialState = {
@@ -32,9 +33,44 @@ function isFetching(state = false, action) {
   }
 }
 
+const initialStateProduk = {
+  items: [],
+}
+
+function Produk (state = initialStateProduk, action){
+  switch(action.type){
+    case FETCH_PRODUCTS:
+      return {
+        ...state,
+        items: action.payload
+      }
+    default:
+      return state;
+  }
+}
+
+const initialStateCart = {
+  cart: [],
+  total: 0
+}
+
+function Cart (state = initialStateCart, action){
+  switch(action.type){
+    case FETCH_PRODUCTS:
+      return {
+        ...state,
+        items: action.payload
+      }
+    default:
+      return state;
+  }
+}
+
 const loginApp = combineReducers({
   user,
-  isFetching
+  isFetching,
+  Produk,
+  Cart
 });
 
 export default loginApp;

@@ -1,16 +1,22 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 import './ProdukCard.css'
 
 
-const ProdukCard = () => {
+const ProdukCard = (produk) => {
+    // let img = "http://bukuku.codepanda.id/"+props.product["image"]
+    // console.log(img);
+    
     return (
         <div className="produk-card">
-            <img className="img-produk" alt="produk photo" src="https://inc.mizanstore.com/aassets/img/com_cart/produk/berhentidikamu.jpg"></img>
-            <h4 className="book-title">Judul</h4>
-            <h5 className="book-author">Pengarang</h5>
-            <h6 className="book-price">Rp 60.000,-</h6>
-            <button className="btn-order">BELI</button>
+            <img className="img-produk" alt="produk photo" ></img>
+            <h4 className="book-title">{produk.product.nama}</h4>
+            <h5 className="book-author">{produk.product.category}</h5>
+            <h6 className="book-price">Rp {produk.product.harga}-</h6>
+            <Link to={`/produk/detail/${ produk.product._id }`}>
+                <button className="btn-order">Detail</button>
+            </Link>
+            
         </div>
     )
 }

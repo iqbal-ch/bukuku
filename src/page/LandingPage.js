@@ -10,14 +10,6 @@ const Landing = () => {
             <Banner/>
             <Banner/>
             <div className="produk">
-                <ProdukCard/>
-                <ProdukCard/>
-                <ProdukCard/>
-                <ProdukCard/>
-                <ProdukCard/>
-                <ProdukCard/>
-                <ProdukCard/>
-                <ProdukCard/>
             </div>
             <div className="coba">
                 <button className="btn-loadmore">Load More</button>

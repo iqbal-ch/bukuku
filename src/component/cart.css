@@ -1,0 +1,32 @@
+.cart{
+    margin-bottom: 20px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.img-produk{
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+    width: 110px;
+    height: 125px;
+    background-color: azure;
+}
+.label-produk{
+    display: inline-block;
+    float: left;
+    margin-left: 25px; 
+}
