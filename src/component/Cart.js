@@ -3,7 +3,7 @@ import React from 'react'
 import './cart.css'
 const Cart = (props) =>{
     const img = props.item.barang.image;
-    const image = img.replace("3000","3001");
+    const image = img.replace("localhost:3000","bukuku.codepanda.id");
     return(
         <div className="cart">
             <table>

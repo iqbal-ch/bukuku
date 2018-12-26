@@ -4,7 +4,7 @@ import './ProdukCard.css'
 
 
 const ProdukCard = (produk) => {
-    let img = "http://localhost:3001/"+produk.product.image;
+    let img = "http://bukuku.codepanda.id/"+produk.product.image;
     // console.log(img);
     
     return (

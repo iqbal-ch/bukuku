@@ -39,7 +39,7 @@ class ProdukDetailPage extends Component {
             let user = localStorage.getItem("user")
             user = JSON.parse(user)
 
-            Axios.get('http://localhost:3001/barangs/'+_id,null,{
+            Axios.get('http://bukuku.codepanda.id/barangs/'+_id,null,{
                 headers: {'Authorization': "Bearer " + user.token}
            }).then(res => {
                 let products = res.data;

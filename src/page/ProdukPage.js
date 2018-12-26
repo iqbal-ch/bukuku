@@ -22,7 +22,7 @@ class ProdukPage extends Component {
         this.handleSearch = this.handleSearch.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.fetchProducts(() => {
             this.setState({ 
                 filter: this.props.products,
@@ -102,9 +102,11 @@ class ProdukPage extends Component {
                         </div>
                         <Category list={category} onClick={this.handleCategory}/>
                         <div className="produk">
-                        {this.state.filter.map( p => (
+                        {this.state.filter !== null &&
+                            this.state.filter.map( p => (
                                 <ProdukCard product={p} key={p._id}/>
-                        ))}
+                        ))
+                        }
                         </div>
                     </div>
                 }

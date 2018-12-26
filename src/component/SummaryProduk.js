@@ -5,7 +5,7 @@ import './DetailProduk.css'
 
 const SummaryProduk = (props) => {
     const img = props.barang.image;
-    const image = img.replace("3000","3001");
+    const image = img.replace("localhost:3000","bukuku.codepanda.id");
         return(
             <div className="summary-produk">
                 <img className="img-galery" src={image}></img>

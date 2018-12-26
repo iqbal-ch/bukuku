@@ -22,7 +22,7 @@ class CartPage extends Component {
     handleOrder(){
         let user = localStorage.getItem("user")
         user = JSON.parse(user)
-        Axios.post('http://localhost:3001/orders/'+this.props.location.state.barang._id, {
+        Axios.post('http://bukuku.codepanda.id/orders/'+this.props.location.state.barang._id, {
             address : this.state.alamat,
             qty : this.props.location.state.qty
         },{
