@@ -40,7 +40,7 @@ export function actionTryLogin(values) {
             }
           };
         dispatch(setFetching(true));
-        Axios.post('http://bukuku.codepanda.id/users/login', {
+        Axios.post('http://localhost:3001/users/login', {
             email: values.email,
             password: values.password
         },axiosConfig)
@@ -61,7 +61,7 @@ export function actionTryLogin(values) {
 export function actionTryRegister(values) {
     return dispatch => {
         dispatch(setFetching(true));
-        Axios.post('bukuku.codepanda.id/users/signup', {
+        Axios.post('http://localhost:3001/users/signup', {
             email: values.email,
             password: values.password,
             name: values.name,
@@ -83,7 +83,7 @@ export function fetchProducts (callback) {
     return dispatch => {
     let user = localStorage.getItem("user")
     user = JSON.parse(user)
-    Axios.get('http://bukuku.codepanda.id/barangs/',null,{
+    Axios.get('http://localhost:3001/barangs/',null,{
         headers: {'Authorization': "Bearer " + user.token}
    }).then(res => {
         let products = res.data["barangs"]

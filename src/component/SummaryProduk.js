@@ -1,13 +1,14 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import './DetailProduk.css'
 
 const SummaryProduk = (props) => {
+    const img = props.barang.image;
+    const image = img.replace("3000","3001");
         return(
             <div className="summary-produk">
-                <div className="img-galery">
-                    
-                </div>
+                <img className="img-galery" src={image}></img>
                 <div className="form-produk">
                     <h1>{props.barang.nama}</h1>
                     <h6 style={{display:"inline"}}>Kategory : {props.barang.category}</h6>
@@ -15,8 +16,15 @@ const SummaryProduk = (props) => {
                     <h6>qty :</h6>
                     <button onClick={props.deQty}>-</button><input value={props.qty}/><button onClick={props.inQty}>+</button>
                     <div>
-                        <button>BELI</button>
-                        {/* <button>ADD TO CART</button> */}
+                    <Link to={{
+                        pathname:'/checkout',
+                        state:{
+                            qty:props.qty,
+                            barang :props.barang
+                        }
+                    }}>
+                        <button className="btn-order" disabled={props.qty === 0}>BELI</button>
+                    </Link>
                     </div>
                 </div>
             </div>

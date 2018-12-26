@@ -34,7 +34,7 @@
     font-size: 16px;
   }
 
-ul,li {
+.ul-nav{
     display: inline;
     padding: 15px;
 }
@@ -47,8 +47,11 @@ a {
   }
 
 .search-input{
+    float: right;
     display: inline-block;
     margin: auto;
+    margin-right: 16px;
+    margin-buttom: 16px;
 }
 
 .search-input > input{

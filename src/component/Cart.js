@@ -1,7 +1,9 @@
 import React from 'react'
 
 import './cart.css'
-const Cart = () =>{
+const Cart = (props) =>{
+    const img = props.item.barang.image;
+    const image = img.replace("3000","3001");
     return(
         <div className="cart">
             <table>
@@ -14,17 +16,17 @@ const Cart = () =>{
                 <tr>
                     <td>
                         <div>
-                            <img className="img-produk"></img>
+                            <img className="img-product" src={image}></img>
                             <div className="label-produk">
-                                <h5>nama</h5>
-                                <h5>category</h5>
+                                <h5>{props.item.barang.nama}</h5>
+                                <h5>{props.item.barang.category}</h5>
                             </div>
                             
                         </div>
                     </td>
-                    <td>Rp.100.000,-</td>
-                    <td>2</td>
-                    <td>Rp.200.000,-</td>
+                    <td>Rp.{props.item.barang.harga},-</td>
+                    <td>{props.item.qty}</td>
+                    <td>Rp.{props.item.barang.harga * props.item.qty},-</td>
                 </tr>
             </table>
         </div>
