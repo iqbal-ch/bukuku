@@ -1,13 +1,16 @@
 import React, {Component} from 'react'
 import Cart from '../component/Cart'
 import './cartpage.css'
+
+import { Redirect } from 'react-router';
 import Axios from 'axios';
 class CartPage extends Component {
     constructor(props){
         super(props);
         console.log(props)
         this.state ={
-            alamat:''
+            alamat:'',
+            redirect:false
         }
     this.handleChange = this.handleChange.bind(this);
     this.handleOrder = this.handleOrder.bind(this);
@@ -33,12 +36,17 @@ class CartPage extends Component {
        })
         .then(res => {
             console.log(res)
+            this.setState({
+                redirect:true
+            })
         })
         .catch(err => {
             console.log(err)
         });
     }
     render(){
+        if(this.state.redirect)
+            return <Redirect to="/" />
         return(
             <div>
                 <Cart item={this.props.location.state}/>
