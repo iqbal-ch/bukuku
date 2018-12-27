@@ -59,6 +59,11 @@ export function actionTryLogin(values) {
 }
 
 export function actionTryRegister(values) {
+    let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+      };
     return dispatch => {
         dispatch(setFetching(true));
         Axios.post('http://bukuku.codepanda.id/users/signup', {
@@ -66,10 +71,10 @@ export function actionTryRegister(values) {
             password: values.password,
             name: values.name,
             phone_number: values.phone_number
-        })
+        },axiosConfig)
         .then(res => {
         const message = res.message;
-        console.log(message)
+        alert('Succes Register, Please Login !')
         dispatch(setFetching(false));
         })
         .catch(err => {
@@ -83,9 +88,7 @@ export function fetchProducts (callback) {
     return dispatch => {
     let user = localStorage.getItem("user")
     user = JSON.parse(user)
-    Axios.get('http://bukuku.codepanda.id/barangs/',null,{
-        headers: {'Authorization': "Bearer " + user.token}
-   }).then(res => {
+    Axios.get('http://bukuku.codepanda.id/barangs/').then(res => {
         let products = res.data["barangs"]
         console.log(products)
         dispatch(setProduk(products));

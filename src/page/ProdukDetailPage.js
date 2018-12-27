@@ -40,7 +40,10 @@ class ProdukDetailPage extends Component {
             user = JSON.parse(user)
 
             Axios.get('http://bukuku.codepanda.id/barangs/'+_id,null,{
-                headers: {'Authorization': "Bearer " + user.token}
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': "Bearer " + user.token
+                }
            }).then(res => {
                 let products = res.data;
                 this.setState({

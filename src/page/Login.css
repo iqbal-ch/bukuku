@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+
+.label-login{
+    display: block;
+}
+
+.input-login{
+    display: block;
+}
+
+.btn-login{
+    float: right;
+}

@@ -9,6 +9,11 @@
   color: white;
 }
 
+.App {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 
 .content {
  margin-left: 15px;

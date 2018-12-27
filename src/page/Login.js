@@ -52,14 +52,14 @@ class Login extends Component {
       return <Redirect to="/" />
       
     return (
-      <div>
+      <div className="wrapper">
         <h1>Login Page</h1>
         <form>
-          <label>username or email :</label>
-          <input type="email" name="email" onChange={this.handleChange}></input>
-          <label>password :</label>
-          <input type='password' name="password" onChange={this.handleChange}></input>
-          <button className="button" onClick={this.handleSubmit}>
+          <label className="label-login">username or email :</label>
+          <input className="input-login" type="email" name="email" onChange={this.handleChange}></input>
+          <label className="label-login" >password :</label>
+          <input className="input-login" type='password' name="password" onChange={this.handleChange}></input>
+          <button className="input-login btn-login" className="button" onClick={this.handleSubmit}>
             Login
           </button>
         </form>

@@ -9,6 +9,7 @@ import Landing from './page/LandingPage'
 import ProdukDetailPage from './page/ProdukDetailPage'
 import ProdukPage from './page/ProdukPage'
 import SignupPage from './page/Signup'
+import Order from './page/orderPage'
 import CartPage from './page/CartPage'
 import notFound from './page/404'
 
@@ -25,6 +26,7 @@ class App extends Component {
         <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/checkout' component={CartPage} />
+            <Route path='/order' component={Order} />
             <Route path='/login' component={Login} />
             <Route path='/signup' component={SignupPage} />
             <ProtectedRoute exact path='/produk' component={ProdukPage} />

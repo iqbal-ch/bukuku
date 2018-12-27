@@ -23,7 +23,7 @@ class SignupPage extends Component {
 
     onSubmit(e){
         e.preventDefault();
-        console.log(this.state);
+        this.props.tryRegister(this.state)
     }
 
     render() {
@@ -57,6 +57,6 @@ const mapDispatchToProps = (dispatch) => {
   };
   
   //export default Login;
-  // export default connect(mapStateToProps, mapDispatchToProps)(Login);
+  export default connect(null, mapDispatchToProps)(SignupPage);
 
-export default SignupPage;
+//export default SignupPage;

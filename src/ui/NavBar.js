@@ -10,6 +10,16 @@ import './Navbar.css';
 class NavBar extends Component {
     constructor(props) {
         super(props);
+    
+        this.state={
+            isAuth:false
+        }
+        this.setAuth = this.setAuth.bind(this);
+    }
+
+    setAuth(e){
+        e.preventDefault();
+        this.setState({ isAuth: true});
     }
     
     render (){
@@ -22,11 +32,16 @@ class NavBar extends Component {
                                 <input></input>
                                  <button>search</button>
                             </div> */}
-                                <img active={this.props.isAuth}className="img-profil" alt="photo profil" src="https://lh3.googleusercontent.com/-r-J7b6Nd1W8/AAAAAAAAAAI/AAAAAAAAAAA/AKxrwcbACnEtjGHxbVvaUl3gB4vRqE9Vhw/s64-c-mo/photo.jpg"></img>
-                                <button active={this.props.isAuth}className="button-left">Keranjang</button>
-                                <button active={this.props.isAuth}className="button-left" onClick={this.props.deleteUser()}>logout</button>
-                        {this.props.isAuth === false &&
-                                <button className="button-left">login<Link to='/login'/></button>
+                            {this.state.isAuth === true &&
+                                <button className="button-left" onClick={this.props.deleteUser()}>logout</button>
+                                
+                            }
+                            {this.state.isAuth === true &&
+                                <button className="button-left">Keranjang</button>
+                            }
+                        {this.state.isAuth === false &&
+                                
+                                <Link className="button-link" to='/login'><button className="button-left">login</button></Link>
                         }
                         </div>
                         <div className="navbar-bottom">
@@ -34,6 +49,7 @@ class NavBar extends Component {
                                 <ul className="ul-nav">
                                     <li className="ul-nav"><Link to='/'>Home</Link></li>
                                     <li className="ul-nav"><Link to='/produk'>Produk</Link></li>
+                                    <li className="ul-nav"><Link to='/order'>order  </Link></li>
                                 </ul> 
                             </div>
                         </div>
